@@ -6,7 +6,7 @@ from models import db, Job
 import config
 
 app = Flask(__name__)
-CORS(app)  # Allow all origins for now
+CORS(app)  # Enable CORS for all origins (or restrict in production)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
